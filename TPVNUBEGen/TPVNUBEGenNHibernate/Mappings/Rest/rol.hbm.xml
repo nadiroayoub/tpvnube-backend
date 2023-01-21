@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="RolEN" table="Rol"> 
+				  	
+						<id name="Id" column="idRol" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="Empleo" > 
+						<column name="empleo"  not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<many-to-one name="Cajero" class="TPVNUBEGenNHibernate.EN.Rest.CajeroEN" >	
+								<column name="FK_idCajero_idCajero"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Camarero" class="TPVNUBEGenNHibernate.EN.Rest.CamareroEN" >	
+								<column name="FK_idCamarero_idCamarero"/> 
+						</many-to-one>
+											 					
+			
+			
+		  			
+						<many-to-one name="Empleado" class="TPVNUBEGenNHibernate.EN.Rest.EmpleadoEN" >	
+								<column name="FK_DNIEmpleado_idEmpleado"/> 
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="RolENReadAllHQL">from RolEN</query>
+		</hibernate-mapping>
+	

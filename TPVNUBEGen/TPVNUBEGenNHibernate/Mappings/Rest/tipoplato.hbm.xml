@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="TipoPlatoEN" table="TipoPlato"> 
+				  	
+						<id name="Id" column="idTipoPlato" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="Nombre" type="string"> 
+						<column name="nombre"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+		  			
+						<bag name="Plato" >
+							<key>
+							
+								
+								<column name="FK_idTipoPlato_idTipoPlato"/>
+					      	</key>
+							<one-to-many class="TPVNUBEGenNHibernate.EN.Rest.PlatoEN"/>
+					    </bag>
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="TipoPlatoENReadAllHQL">from TipoPlatoEN</query>
+		</hibernate-mapping>
+	

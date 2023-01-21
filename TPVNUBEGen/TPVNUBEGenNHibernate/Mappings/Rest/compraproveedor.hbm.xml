@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="CompraProveedorEN" table="CompraProveedor"> 
+				  	
+						<id name="Id" column="idCompraProveedor" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="EstadoCompra" > 
+						<column name="estadoCompra"  not-null="true"/>
+					</property>
+					<property name="Fecha" type="date"> 
+						<column name="fecha"  not-null="true"/>
+					</property>
+					<property name="Total" type="double"> 
+						<column name="total" />
+					</property>
+			
+			
+			
+		  			
+						<bag name="LineaCompraProveedor" cascade="delete">
+							<key>
+							
+								
+								<column name="FK_idCompraProveedor_idPedidoProveedor"/>
+					      	</key>
+							<one-to-many class="TPVNUBEGenNHibernate.EN.Rest.LineaCompraProveedorEN"/>
+					    </bag>
+					
+			
+		  			
+						<many-to-one name="Proveedor" class="TPVNUBEGenNHibernate.EN.Rest.ProveedorEN" >	
+								<column name="FK_idProveedor_idProveedor"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Negocio" class="TPVNUBEGenNHibernate.EN.Rest.NegocioEN" >	
+								<column name="FK_idNegocio_idNegocio"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<bag name="Pago" table="[pago_pedidoProveedor]" inverse="true" >
+							<key>
+								
+									<column name="FK_idCompraProveedor_idPedidoProveedor"/> 
+							</key>
+      						<many-to-many class="TPVNUBEGenNHibernate.EN.Rest.PagoEN">
+									<column name="FK_idPago_idPago"/> 
+      						</many-to-many>
+    					</bag>
+			
+			
+			
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="CompraProveedorENReadAllHQL">from CompraProveedorEN</query>
+		</hibernate-mapping>
+	

@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\SolucionEmpleado\\TPVNUBETests\\TPVNUBETests.csproj": {}
+  },
+  "projects": {
+    "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\SolucionEmpleado\\TPVNUBETests\\TPVNUBETests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\SolucionEmpleado\\TPVNUBETests\\TPVNUBETests.csproj",
+        "projectName": "TPVNUBETests",
+        "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\SolucionEmpleado\\TPVNUBETests\\TPVNUBETests.csproj",
+        "packagesPath": "C:\\Users\\nadir\\.nuget\\packages\\",
+        "outputPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\SolucionEmpleado\\TPVNUBETests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nadir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenEmpleadoRESTAzure\\TPVNUBEGenEmpleadoRESTAzure.csproj": {
+                "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenEmpleadoRESTAzure\\TPVNUBEGenEmpleadoRESTAzure.csproj"
+              },
+              "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj": {
+                "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenEmpleadoRESTAzure\\TPVNUBEGenEmpleadoRESTAzure.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenEmpleadoRESTAzure\\TPVNUBEGenEmpleadoRESTAzure.csproj",
+        "projectName": "TPVNUBEGenEmpleadoRESTAzure",
+        "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenEmpleadoRESTAzure\\TPVNUBEGenEmpleadoRESTAzure.csproj",
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj": {
+                "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj",
+        "projectName": "TPVNUBEGenNHibernate",
+        "projectPath": "C:\\ooh4ria\\tpvnubews1\\TPVNUBEGen\\TPVNUBEGenNHibernate\\TPVNUBEGenNHibernate.csproj",
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="MesaEN" table="Mesa"> 
+				  	
+						<id name="Id" column="idMesa" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="Estado" > 
+						<column name="estado"  not-null="true"/>
+					</property>
+					<property name="Numero" type="integer"> 
+						<column name="numero"  unique="true" not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<bag name="Comanda" >
+							<key>
+							
+								
+								<column name="FK_idMesa_idMesa"/>
+					      	</key>
+							<one-to-many class="TPVNUBEGenNHibernate.EN.Rest.ComandaEN"/>
+					    </bag>
+					
+			
+			
+			
+		  			
+						<many-to-one name="Negocio" class="TPVNUBEGenNHibernate.EN.Rest.NegocioEN" >	
+								<column name="FK_idNegocio_idNegocio"/> 
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="MesaENReadAllHQL">from MesaEN</query>
+		</hibernate-mapping>
+	

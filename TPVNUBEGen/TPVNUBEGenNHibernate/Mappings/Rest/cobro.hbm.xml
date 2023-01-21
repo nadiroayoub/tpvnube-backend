@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="CobroEN" table="Cobro"> 
+				  	
+						<id name="Id" column="idCobro" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="Monto" type="float"> 
+						<column name="monto"  not-null="true"/>
+					</property>
+					<property name="Fecha" type="timestamp"> 
+						<column name="fecha"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+		  			
+						<many-to-one name="Comanda" class="TPVNUBEGenNHibernate.EN.Rest.ComandaEN" >	
+								<column name="FK_idComanda_idPedido"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Cliente" class="TPVNUBEGenNHibernate.EN.Rest.ClienteEN" >	
+								<column name="FK_idCliente_idCliente"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="TipoCobro" class="TPVNUBEGenNHibernate.EN.Rest.TipoCobroEN" >	
+								<column name="FK_idTipoCobro_idTipoCobro"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Caja" class="TPVNUBEGenNHibernate.EN.Rest.CajaEN" >	
+								<column name="FK_idCaja_idCaja"/> 
+						</many-to-one>
+											 					
+			
+			
+		  			
+						<many-to-one name="Empleado" class="TPVNUBEGenNHibernate.EN.Rest.EmpleadoEN" >	
+								<column name="FK_id_idEmpleado"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Negocio" class="TPVNUBEGenNHibernate.EN.Rest.NegocioEN" >	
+								<column name="FK_idNegocio_idNegocio"/> 
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="CobroENReadAllHQL">from CobroEN</query>
+		  <query name="CobroENdameCobroPorNegocioHQL"><![CDATA[FROM CobroEN cobro where cobro.Negocio.Id = :p_negocio]]></query>
+		</hibernate-mapping>
+	

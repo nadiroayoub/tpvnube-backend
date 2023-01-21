@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="TPVNUBEGenNHibernate"
+		                   namespace="TPVNUBEGenNHibernate.EN.Rest">
+		    
+		    
+			
+				<class name="PagoEN" table="Pago"> 
+				  	
+						<id name="Id" column="idPago" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<bag name="IdPedidoProveedor" table="idPedidoProveedor"> 
+						<key>
+						</key>
+						<element column="IdPedidoProveedor" type="integer"/> 
+    				</bag>
+					<property name="Monto" type="double"> 
+						<column name="monto"  not-null="true"/>
+					</property>
+					<property name="FechaPago" type="date"> 
+						<column name="fechaPago"  not-null="true"/>
+					</property>
+					<property name="NumeroDocumento" type="integer"> 
+						<column name="numeroDocumento"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+		  			
+						<bag name="CompraProveedor" table="[pago_pedidoProveedor]"  >
+							<key>
+								
+									<column name="FK_idPago_idPago"/> 
+							</key>
+      						<many-to-many class="TPVNUBEGenNHibernate.EN.Rest.CompraProveedorEN">
+									<column name="FK_idCompraProveedor_idPedidoProveedor"/> 
+      						</many-to-many>
+    					</bag>
+			
+			
+		  			
+						<many-to-one name="TipoPago" class="TPVNUBEGenNHibernate.EN.Rest.TipoPagoEN" >	
+								<column name="FK_idTipoPago_idMetodoPago"/> 
+						</many-to-one>
+											 					
+			
+			
+		  			
+						<many-to-one name="Caja" class="TPVNUBEGenNHibernate.EN.Rest.CajaEN" >	
+								<column name="FK_idCaja_idCaja"/> 
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="PagoENReadAllHQL">from PagoEN</query>
+		</hibernate-mapping>
+	
